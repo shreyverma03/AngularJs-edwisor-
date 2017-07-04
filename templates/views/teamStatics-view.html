@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+   	 <u><center><h1> {{ teamStatic.teamName }}( {{teamStatic.keyWord}} )</h1></center></u>
+   	  <br>
+   	  <table class="table table-responsive table-hover table-striped table-bordered">
+   	  	<thead>
+   	  		<th>Total Match Played</th>
+   	  		<th>{{teamStatic.matchCount}}</th>
+   	  	</thead>
+   	  	<tbody>
+   	  		<tr>
+   	  			<td><b>Match Won</b></td>
+   	  			<td>{{teamStatic.wonMatch}}</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td><b>Match Lost</b></td>
+   	  			<td>{{teamStatic.matchCount - teamStatic.wonMatch}}</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td><b>Total No Of Goals</b></td>
+   	  			<td>{{teamStatic.totalGoals}}</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td><b>Min Score in Match</b></td>
+   	  			<td>{{teamStatic.minScore}}</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td><b>Max Score in Match</b></td>
+   	  			<td>{{teamStatic.maxScore}}</td>
+   	  		</tr>
+   	  	</tbody>
+   	  </table>
+
+   	    <div>
+       	<u><center><h2>Best Performance</h2></center></u>
+       	<br>
+   	  <table class="table table-responsive table-hover table-striped table-bordered">
+   	  	<thead>
+   	  		<th>Match Name</th>
+   	  		<th>{{teamStatic.maxScoreMatchName}}</th>
+   	  	</thead>
+   	  	<tbody>
+   	  		<tr>
+   	  			<td><b>Match Date</b></td>
+   	  			<td>{{teamStatic.maxScoreMatch.date}}</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td><b>Teams</b></td>
+   	  			<td>{{teamStatic.maxScoreMatch.team1.name}} v/s {{teamStatic.maxScoreMatch.team2.name}}</td>
+   	  		</tr>
+   	  		<tr>
+   	  			<td><b>Scores</b></td>
+   	  			<td>{{teamStatic.maxScoreMatch.team1.name}} - {{teamStatic.maxScoreMatch.score1}}<br>
+   	  			{{teamStatic.maxScoreMatch.team2.name}} - {{teamStatic.maxScoreMatch.score2}}
+   	  			</td>
+   	  		</tr>
+   	  	</tbody>
+   	  </table>
+       	
+        </div>
+        <!-- Pager -->
+        <ul class="pager">
+            <li class="next">
+                <a href="#/">Back to Home &rarr;</a>
+            </li>
+        </ul>
+    </div>
+</div>

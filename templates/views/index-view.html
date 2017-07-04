@@ -1,0 +1,14 @@
+ <center><h1>List Of All The Matches</h1></center>
+    <hr>
+   
+        <div class="col-md-12">
+            <table class="table table-responsive table-hover table-striped table-border" ng-repeat="fillList in dataToPresent.firstData" > 
+                <tbody ng-repeat="fetchFromFullList in fillList" >
+                    <tr ng-repeat="finalData in fetchFromFullList">
+                        <td ><center><a ng-href="#/singlePage/{{finalData}}" ><b>{{ finalData.name}}</b></a> <br></center></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </table>

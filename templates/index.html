@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="blogApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>English Premier Leagues</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+   
+</head>
+<style>
+.txt{
+/overflow-x:hidden;
+margin-top:-1%!important;
+height:25vh;
+width:100%;
+position:relative;
+}
+.text
+{
+width:100%;
+text-align:center;
+padding-top:4%;
+}
+footer{
+background:black;
+color:white;
+text-align:center;
+height:6vh;
+position:relative;
+}
+</style>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+           <div class="txt" style="background:rgba(2,2,2,0.6); ">
+		   <div class="text-center text">
+		   <h2 style="color:white;">English  Premier  League</h2>
+		   </div>
+		   </div>
+		</div>
+    </nav>	
+	<br><br><br>
+	 
+    <!-- Main Content -->
+    <div class="container">
+        <div class="col-sm-4 col-xs-12 col-md-3 col-lg-3 col-xl-3"><br><br><br><br><br><br><br>
+    <div class="row">
+        Team Detail By Team Id (Case Sensitive):
+        <div class="input-group">
+            <input type="text" ng-model="search" class="form-control " placeholder="Get Team Details by Team Code">
+            <div class="input-group-btn">
+                <a class="btn btn-primary" ng-href="#/teamDetails/{{search}}" style="padding:6px 15px;">
+                    <i class="glyphicon glyphicon-search"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        Select Teams Data By Year:
+        <div class="input-group">
+            <select ng-model="year" ng-change="getYearData(year)" class="form-control" name="selectYear" id="selectYear">
+                <option value="">Select Year</option>
+                <option value="0">2015-2016</option>
+                <option value="1">2016-2017</option>
+            </select>
+            <div class="input-group-btn">
+                <a class="btn btn-primary" ng-href="#/yearDetails/{{year}}" style="padding:6px 15px;">
+                    <i class="glyphicon glyphicon-search"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">  
+    Filter Teams By Name(Team Name):
+        <div class="input-group">
+            <input type="text" ng-model="filterByName" class="form-control" placeholder="Filter By Name">
+            <div class="input-group-btn">
+                <a class="btn btn-primary" ng-href="#/filterByName/{{filterByName}}" style="padding:6px 15px;">
+                    <i class="glyphicon glyphicon-search"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+    Filter Teams By Score:
+        <div class="input-group">
+            <input type="text" ng-model="filterByScore" class="form-control" placeholder="Filter By Score">
+            <div class="input-group-btn">
+                <a class="btn btn-primary" ng-href="#/filterByScore/{{filterByScore}}" style="padding:6px 15px;">
+                    <i class="glyphicon glyphicon-search"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+      </div><br><br><br><br><br>
+       <div ng-view  class="col-sm-8 col-xs-12 col-md-9 col-lg-9 col-xl-9">
+           
+           
+       </div> 
+
+    </div>
+    <hr>
+	
+
+     
+	<footer>
+		<p>&copy; 2017 Shreyash  Shantam. All Rights Reserved. <br></p>
+	</footer>
+		
+
+  
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+   <!--script src="friends.js"></script-->
+   <script type="text/javascript" src="angular/app.js"></script>
+    <script type="text/javascript" src="angular/routes.js"></script>
+     <script type="text/javascript" src="angular/app.js"></script>
+    <script type="text/javascript" src="angular/routes.js"></script>
+   </body>
+</html>

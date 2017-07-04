@@ -1,0 +1,25 @@
+<center><h2>{{ matchViewData.matchFullDetailsAll.team1.code }} V/s {{ matchViewData.matchFullDetailsAll.team2.code }} Match on {{ matchViewData.matchFullDetailsAll.date | date: 'dd-MM-yyyy'}}</h2></center>
+     <table class="table table-responsive">
+       <tr>
+         <td>
+           <h3> Final Results - <span ng-show="matchViewData.matchFullDetailsAll.score1 > matchViewData.matchFullDetailsAll.score2">Winner :  {{ matchViewData.matchFullDetailsAll.team1.name }} </span>
+          <span ng-show="matchViewData.matchFullDetailsAll.score1 < matchViewData.matchFullDetailsAll.score2">Winner :  {{ matchViewData.matchFullDetailsAll.team2.name }} </span>
+          <span ng-show="matchViewData.matchFullDetailsAll.score1 == matchViewData.matchFullDetailsAll.score2">Match Tie </span></h3>
+         </td>
+         <td>
+           <h3>Total Goals : {{ matchViewData.matchFullDetailsAll.score1 + matchViewData.matchFullDetailsAll.score2 }}</h3>
+         </td>
+       </tr>
+       <tr>
+         <td>Gools By : {{ matchViewData.matchFullDetailsAll.team1.name }}({{ matchViewData.matchFullDetailsAll.team1.code }}) </td><td> {{ matchViewData.matchFullDetailsAll.score1 }}</td>
+        </tr>
+        <tr>
+         <td>Gools By : {{ matchViewData.matchFullDetailsAll.team2.name }}({{ matchViewData.matchFullDetailsAll.team2.code }}) </td><td> {{ matchViewData.matchFullDetailsAll.score2 }}</td>
+       </tr>
+     </table>
+        <!-- Pager -->
+        <ul class="pager">
+            <li class="next">
+                <a href="#/">Back to Home &rarr;</a>
+            </li>
+        </ul>

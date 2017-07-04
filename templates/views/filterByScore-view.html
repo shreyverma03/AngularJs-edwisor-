@@ -1,0 +1,24 @@
+<center><h1> {{ }}</h1></center>
+   	  <br>
+   	  <table class="table table-responsive table-hover table-striped table-bordered">
+   	  	<thead>
+   	  		<th><center>Date</center></th>
+   	  		<th><center>Teams</center></th>
+   	  	</thead>
+   	  	<tbody>
+   	  		<tr ng-repeat="z in dataToPresent.firstData">
+   	  			<td>{{z.date}}</td>
+   	  			<td><a ng-href="#/matchDetails/{{z}}">{{z.team1.code}} V/s {{z.team2.code}}</a></td>
+   	  		</tr>
+   	  	</tbody>
+   	  </table>
+   	    <div>
+       	
+       	
+        </div>
+        <!-- Pager -->
+        <ul class="pager">
+            <li class="next">
+                <a href="#/">Back to Home &rarr;</a>
+            </li>
+        </ul>
